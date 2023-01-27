@@ -1,19 +1,20 @@
 {{!< default}}
 
 <main class="site-main">
-
-    {{#post}}
-        {{> "content" width="full"}}
-    {{/post}}
-
-    {{#is "post"}}
-        {{#if @custom.show_related_posts}}
-            {{> "related-posts"}}
-        {{/if}}
-
+    {{#if @member}}
         {{#post}}
-            {{> "comments"}}
+            {{> "content" width="full"}}
         {{/post}}
-    {{/is}}
+
+        {{#is "post"}}
+            {{#if @custom.show_related_posts}}
+                {{> "related-posts"}}
+            {{/if}}
+
+            {{#post}}
+                {{> "comments"}}
+            {{/post}}
+        {{/is}}
+    {{/if}}
 
 </main>

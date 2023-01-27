@@ -3,11 +3,14 @@
 <main class="site-main">
 
     <div class="post-feed gh-feed gh-canvas">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
+        {{#if @member}}
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        {{/if}}
     </div>
-
-    {{pagination}}
+    {{#if @member}}
+        {{pagination}}
+    {{/if}}
 
 </main>
