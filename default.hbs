@@ -82,8 +82,10 @@
     {{#is "home, post"}}
         {{#unless @member}}
             <section class="single-cta">
-                <h2 class="single-cta-title">This site is for subscribers only</h2>
+                <h2 class="single-cta-title">This blog is private</h2>
+                <p class="single-cta-title">If you are on the mailing list you can sign in using your email address</p>
                 <button class="button single-cta-button" data-portal="signup">Subscribe now</button>
+                <button class="button button-secondary members-login" data-portal="signin">Login</button>
             </section>
         {{/unless}}
     {{/is}}
